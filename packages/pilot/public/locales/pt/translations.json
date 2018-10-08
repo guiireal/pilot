@@ -977,7 +977,7 @@
       "period_full": "Todo período",
       "period_today": "Hoje",
       "period": "{{start}} - {{end}}",
-      "text_search_placeholder": "ID, número do documento, nome ou e-mail do cliente",
+      "text_search_placeholder": "Filtre por Id, número do documento, nome ou e-mail",
       "title": "Transações",
       "total_amount": "total de",
       "try_again": "Tente novamente com outros filtros."
@@ -1001,7 +1001,7 @@
     },
     "filter": {
       "apply": "Filtrar",
-      "reset": "Limpar",
+      "reset": "Limpar filtros",
       "more": "Mais filtros",
       "filtering_by": "Filtrando por"
     },

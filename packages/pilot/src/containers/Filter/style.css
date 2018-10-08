@@ -5,6 +5,10 @@
   overflow: initial;
 }
 
+.search {
+  min-width: 380px;
+}
+
 .selectedOptionsTitle {
   font-size: 14px;
   text-transform: uppercase;

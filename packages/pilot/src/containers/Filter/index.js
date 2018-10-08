@@ -91,6 +91,7 @@ class Filters extends Component {
 
   renderChildrenInput (input, index) {
     return React.cloneElement(input, {
+      className: style.search,
       disabled: this.props.disabled,
       key: `${input.props.name}-${index}`,
     })
@@ -130,7 +131,7 @@ class Filters extends Component {
             {t('components.filter.more')}
           </Button>
         }
-        <Spacing size="large" />
+        <Spacing size="flex" />
         <Button
           relevance={filtersChanged ? 'normal' : 'low'}
           onClick={onClear}
