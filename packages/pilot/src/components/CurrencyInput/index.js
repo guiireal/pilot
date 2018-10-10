@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {
+  isEmpty,
+  omit,
   pipe,
   replace,
-  omit,
 } from 'ramda'
 
 import decimalCurrency from '../../formatters/decimalCurrency'
@@ -26,7 +27,7 @@ class CurrencyInput extends Component {
 
     this.state = {
       value: {
-        formatted: formatter(props.value),
+        formatted: isEmpty(props.value) ? '' : formatter(props.value),
         normalized: removeNonDigits(props.value),
       },
     }
@@ -39,7 +40,6 @@ class CurrencyInput extends Component {
     const { formatted, normalized } = this.state.value
     const { onChange, value } = this.props
 
-
     if (prevState.value.normalized !== normalized) {
       onChange(normalized, formatted)
     }
@@ -51,7 +51,7 @@ class CurrencyInput extends Component {
 
   handleValueUpdate (value) {
     const { max } = this.props
-    const formatted = formatter(value)
+    const formatted = isEmpty(value) ? '' : formatter(value)
     const normalized = removeNonDigits(value)
 
     if (!max || (max && normalized <= max)) {
