@@ -34,6 +34,7 @@ import SidebarSummary from './SidebarSummary'
 import Loader from './Loader'
 import Message from './Message'
 import MessageActions from './MessageActions'
+import Quantity from './QuantityInput'
 
 storiesOf('Components|Add Transaction/Customer', module)
   .addDecorator(checkA11y)
@@ -44,6 +45,10 @@ storiesOf('Components|Add Transaction/Products', module)
   .addDecorator(checkA11y)
   .add('List products', () => <WithProducts />)
   .add('Empty list products', () => <EmptyList />)
+
+storiesOf('Components|Quantity', module)
+  .addDecorator(checkA11y)
+  .add('Quantity', () => <Quantity />)
 
 storiesOf('Components|Custom components', module)
   .addDecorator(checkA11y)

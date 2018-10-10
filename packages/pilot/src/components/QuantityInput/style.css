@@ -1,0 +1,53 @@
+@import "former-kit-skin-pagarme/dist/styles/colors/light.css";
+@import "former-kit-skin-pagarme/dist/styles/spacing.css";
+@import "former-kit-skin-pagarme/dist/styles/typography.css";
+
+.field {
+  border-radius: 4px;
+  flex-wrap: nowrap;
+  max-width: 92px;
+  min-width: 62;
+
+  & > div {
+    background-color: var(--color-white);
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    flex: 1;
+    transform: translateX(-2px);
+    z-index: 0;
+  }
+
+  & input {
+    flex: unset;
+    text-align: center;
+    width: 100%;
+  }
+
+  & svg * {
+    fill: var(--color-white);
+  }
+
+  & button {
+    z-index: 1;
+  }
+
+  & button:last-of-type {
+    transform: translateX(-5px);
+  }
+}
+
+.label {
+  display: block;
+  font-size: var(--caption-font-size);
+  margin-bottom: var(--spacing-tiny);
+  white-space: nowrap;
+}
+
+.errorText {
+  margin: 0;
+  margin-top: var(--spacing-tiny);
+  font-size: var(--caption-font-size);
+  color: var(--color-light-red-100);
+  text-align: left;
+}
