@@ -1,4 +1,34 @@
-.emptyState {
-  padding-top: 80px;
-  padding-bottom: 80px;
+@import "former-kit-skin-pagarme/dist/styles/spacing.css";
+
+.row {
+  flex-wrap: nowrap;
+}
+
+.fields {
+
+  & div,
+  & input {
+    max-width: 100%;
+  }
+}
+
+.flexbox {
+  flex-wrap: nowrap;
+
+  & > div:last-child {
+    margin-bottom: 4px;
+  }
+}
+
+.checkboxLabel label {
+  white-space: nowrap;
+}
+
+.realignCheckbox {
+  padding-top: var(--spacing-medium);
+}
+
+.realignButton {
+  align-self: flex-start;
+  padding-top: 20px;
 }

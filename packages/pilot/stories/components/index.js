@@ -20,6 +20,7 @@ import RecipientSectionState from './RecipientSection'
 import RiskLevel from './RiskLevel'
 import ReprocessDetails from './ReprocessDetails'
 import Summary from './Summary'
+import ProductForm from './ProductForm'
 import { WithProducts, EmptyList } from './ProductsList'
 import TotalDisplay from './TotalDisplay'
 import TransferError from './TransferError'
@@ -43,6 +44,7 @@ storiesOf('Components|Add Transaction/Customer', module)
 
 storiesOf('Components|Add Transaction/Products', module)
   .addDecorator(checkA11y)
+  .add('Add products', () => <ProductForm />)
   .add('List products', () => <WithProducts />)
   .add('Empty list products', () => <EmptyList />)
 
