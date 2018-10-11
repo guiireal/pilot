@@ -21,6 +21,7 @@ import RiskLevel from './RiskLevel'
 import ReprocessDetails from './ReprocessDetails'
 import Summary from './Summary'
 import { WithProducts, EmptyList } from './ProductsList'
+import ProductShipping from './ProductShipping'
 import TotalDisplay from './TotalDisplay'
 import TransferError from './TransferError'
 import TransactionDetailsCard from './TransactionDetailsCard'
@@ -35,7 +36,7 @@ import Loader from './Loader'
 import Message from './Message'
 import MessageActions from './MessageActions'
 
-storiesOf('Components|Add Transaction/Customer', module)
+storiesOf('Components|Add Transaction/Customers', module)
   .addDecorator(checkA11y)
   .add('Customer form', () => <CustomerForm />)
   .add('Customer selection', () => <CustomerSelection />)
@@ -44,6 +45,7 @@ storiesOf('Components|Add Transaction/Products', module)
   .addDecorator(checkA11y)
   .add('List products', () => <WithProducts />)
   .add('Empty list products', () => <EmptyList />)
+  .add('Shipping form', () => <ProductShipping />)
 
 storiesOf('Components|Custom components', module)
   .addDecorator(checkA11y)
