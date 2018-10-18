@@ -331,6 +331,7 @@ class Balance extends Component {
       onCancelRequestClick,
       onCancelRequestClose,
       onConfirmCancelPendingRequest,
+      onExport,
       onWithdrawClick,
       search: {
         operations,
@@ -473,6 +474,7 @@ class Balance extends Component {
             >
               <Card>
                 <Operations
+                  onExportData={onExport}
                   columns={translateColumns(getColumns(typesLabels))}
                   currentPage={currentPage}
                   disabled={disabled}
@@ -590,6 +592,7 @@ Balance.propTypes = {
   onCancelRequestClick: PropTypes.func,
   onCancelRequestClose: PropTypes.func,
   onConfirmCancelPendingRequest: PropTypes.func,
+  onExport: PropTypes.func,
   onFilterClick: PropTypes.func.isRequired,
   onPageChange: PropTypes.func.isRequired,
   onWithdrawClick: PropTypes.func.isRequired,
@@ -643,6 +646,7 @@ Balance.defaultProps = {
   modalConfirmOpened: false,
   onCancelRequestClick: null,
   onCancelRequestClose: null,
+  onExport: null,
   onConfirmCancelPendingRequest: null,
   total: {},
 }
