@@ -8,6 +8,7 @@ import ConfigurationCardForm from './ConfigurationCardForm'
 import CopyButton from './CopyButton'
 import CurrencyInput from './CurrencyInput'
 import CreditCardRefundDetails from './CreditCardRefundDetails'
+import CreditCardForm from './CreditCardForm'
 import CustomerSelection from './CustomerSelection'
 import CustomerCard from './CustomerCard'
 import DataDisplay from './DataDisplay'
@@ -35,7 +36,7 @@ import Loader from './Loader'
 import Message from './Message'
 import MessageActions from './MessageActions'
 
-storiesOf('Components|Add Transaction/Customer', module)
+storiesOf('Components|Add Transaction/Customers', module)
   .addDecorator(checkA11y)
   .add('Customer form', () => <CustomerForm />)
   .add('Customer selection', () => <CustomerSelection />)
@@ -44,6 +45,10 @@ storiesOf('Components|Add Transaction/Products', module)
   .addDecorator(checkA11y)
   .add('List products', () => <WithProducts />)
   .add('Empty list products', () => <EmptyList />)
+
+storiesOf('Components|Add Transaction/Payment', module)
+  .addDecorator(checkA11y)
+  .add('Credit card form', () => <CreditCardForm />)
 
 storiesOf('Components|Custom components', module)
   .addDecorator(checkA11y)

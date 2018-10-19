@@ -1,0 +1,7 @@
+.fields {
+
+  & div,
+  & input {
+    max-width: 100%;
+  }
+}
