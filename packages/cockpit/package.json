@@ -35,10 +35,10 @@
   "name": "cockpit",
   "repository": "git@github.com:pagarme/cockpit.git",
   "scripts": {
-    "build": "rm -rf dist/*; env NODE_ENV=production babel src $WATCH -d dist --source-maps --ignore spec.js,test.js",
-    "start": "env WATCH=-w run-p lint:watch build",
-    "lint:watch": "chokidar './src/**/*.{js}' -c 'run-s lint'",
-    "lint": "eslint './src/**/*.js'",
+    "build": "rimraf -rf dist/* && env NODE_ENV=production babel src ./src -d ./dist --source-maps --ignore spec.js,test.js",
+    "start": "npm-run-all --parallel build lint:watch",
+    "lint:watch": "chokidar \"./src/**/*.js\" -c \"run-s lint\"",
+    "lint": "eslint \"./src/**/*.js\"",
     "test": "node scripts/test.js"
   },
   "version": "0.0.1"

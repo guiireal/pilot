@@ -2,7 +2,7 @@
   "private": true,
   "license": "SEE LICENSE IN LICENSES.md",
   "scripts": {
-    "postinstall": "cd packages/cockpit; yarn build"
+    "postinstall": "cd packages/cockpit && yarn build"
   },
   "workspaces": [
     "packages/*"
