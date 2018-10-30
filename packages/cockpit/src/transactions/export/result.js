@@ -14,36 +14,46 @@ import {
 
 import transactionSpec from '../shared/export'
 
-const pickProps = [
-  'amount',
-  'antifraud',
-  'brand_name',
-  'capture_method',
-  'documents',
-  'email',
-  'id',
-  'ip',
-  'name',
-  'paid_amount',
-  'payment_method',
-  'refund_amount',
-  'risk_level',
-  'status',
-  'status_reason',
-  'subscription',
-  'updated_at',
+const headers = [
+  'Status',
+  'ID',
+  'Data',
+  'Nome',
+  'Forma de Pagamento',
+  'Número do Cartão',
+  'Documento',
+  'Email',
+  'ID da Assinatura',
+  'Telefone',
+  'Operadora de Cartão',
+  'Resposta da Operadora',
+  'IP',
+  'Bandeira do Cartão',
+  'Valor',
+  'Valor Capturado',
+  'Valor Estornado',
+  'Recebedores',
+  'Endereço',
+  'Número do Endereço',
+  'Complemento',
+  'Bairro',
+  'CEP',
+  'Cidade',
+  'Estado',
+  'Nível de Risco',
+  'Antifraude',
 ]
 
 const getHeaderValidProps = pipe(
   head,
   prop('_source'),
-  pick(pickProps)
+  pick(headers)
 )
 
 const exportKeys = pipe(
   getHeaderValidProps,
   keys,
-  concat(pickProps),
+  concat(headers),
   uniq
 )
 
